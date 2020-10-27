@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="offer-details">
+    <h1>{{currentOffer.name}}</h1>
+    <div class="info">
+        <img src="{{currentOffer.imageUrl}}" alt="">
+        <div class="description">{{currentOffer.description}}
+            <br>
+            <br>
+            <p> <strong>Buyers:</strong>{{currentOffer.buyers.length}} </p>
+            <br>
+            <p class="price">${{currentOffer.price}}</p>
+        </div>
+    </div>
+    <div class="actions">
+        {{#if isCreator}}
+        <a href="/edit/{{currentOffer._id}}">Edit</a>
+        <a href="/delete/{{currentOffer._id}}">Delete</a>
+        {{else}}
+        {{#if isBought}}
+        <span class="hidden">You bought it</span>
+        {{else}}
+        <a href="/buy/{{currentOffer._id}}">Buy</a>
+        {{/if}}
+        {{/if}}
+    </div>
+</div>
+
+
+{{!-- {{currentOffer.description}} --}}

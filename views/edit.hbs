@@ -1,0 +1,23 @@
+<h1>Edit Offer</h1>
+<p class="message"></p>
+<form action="/edit/{{currentOffer._id}}" method="POST">
+    <div>
+        <input type="text" name="name" placeholder="Name..." value="{{currentOffer.name}}">
+    </div>
+    <div>
+        <input type="text" name="price" placeholder="Price..." value="${{currentOffer.price}}">
+    </div>
+    <div>
+        <input type="text" name="imageUrl" placeholder="Image url..." value="{{currentOffer.imageUrl}}">
+    </div>
+    <div>
+        <textarea name="description"
+            placeholder="Give us some description about this offer...">{{currentOffer.description}}</textarea>
+    </div>
+    <div>
+        <input type="text" name="brand" placeholder="Brand..." value="{{currentOffer.brand}}">
+    </div>
+    <div>
+        <button>Edit</button>
+    </div>
+</form>
